@@ -1,4 +1,6 @@
-import { ability } from '@repo/auth'
+import { defineAbilityFor } from '@repo/auth'
+
+const ability = defineAbilityFor({ role: 'MENBER' })
 
 const userCanInviteSomeoneElse = ability.can('invite', 'User')
 const userCanDeleteOtherUsers = ability.can('delete', 'User')
